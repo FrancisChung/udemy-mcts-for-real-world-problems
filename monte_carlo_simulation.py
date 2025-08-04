@@ -46,6 +46,16 @@ text_ratio =  ax.text (0,5, 1.1, '', transform = ax.transAxes, fontsize = 12, ha
 count_in_circle = 0
 count_in_square = 0
 
+# Initialize lists to store
+points_in_circle_x = []
+points_in_circle_y = []
+points_in_square_x = []
+points_in_square_y = []
+points_in_other_x = []
+points_in_other_y = []
+
+
+
 def animate(i):
     global count_in_circle, count_in_square
 
