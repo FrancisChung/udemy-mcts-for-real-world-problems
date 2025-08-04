@@ -20,3 +20,7 @@ Researchers who want to apply MCTS or combine their approach with MCTS.
 Game developers who want to learn one of the most required algorithms for game development.
 Operations research scientists who want to add new, yet powerful weapon to their optimization arsenal.
 Planning and Scheduling Specialists who want to apply simple yet efficient algorithm to solve their daily complex planning tasks
+
+## Notes
+
+1. Make sure you install pyqt5 to see the charts
