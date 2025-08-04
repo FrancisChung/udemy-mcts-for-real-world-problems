@@ -91,3 +91,12 @@ def animate(i):
         points_in_other_x.append(x)
         points_in_other_y.append(y)
         points_other.set_data(points_in_other_x, points_in_other_y)
+
+    # calculate ratio
+    if count_in_square > 0:
+        ratio = count_in_circle / count_in_square
+        text_ratio.set_text(f'Ratio (Circle / Square): {ratio:.5f}')
+    else:
+        text_ratio.set_text('Calculating...')
+
+    return points_circle, points_square, points_other, text_ratio
