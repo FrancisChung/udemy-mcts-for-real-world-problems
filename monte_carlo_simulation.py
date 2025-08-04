@@ -41,3 +41,8 @@ text_ratio =  ax.text (0,5, 1.1, '', transform = ax.transAxes, fontsize = 12, ha
 
 # Main Code
 
+
+# Counters
+count_in_circle = 0
+count_in_square = 0
+
