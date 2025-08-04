@@ -24,3 +24,7 @@ square = plt. Rectangle(square_bottom_left, a, a, edgecolor = 'green', facecolor
 ax.Add_patch(square)
 
 # Draw Circle
+circle = plt.Circle(circle_center, a, facecolor = 'none', edgecolor = 'blue', linewidth = 2,  label = 'Circle')
+ax.Add_patch(circle)
+
+# Main Code
