@@ -46,3 +46,20 @@ text_ratio =  ax.text (0,5, 1.1, '', transform = ax.transAxes, fontsize = 12, ha
 count_in_circle = 0
 count_in_square = 0
 
+def animate(i):
+    global count_in_circle, count_in_square
+
+    #generate random points
+    x = np.random.uniform(-a, 6*a)
+    y = np.random.uniform(-1.5*a, 1.5*a)
+
+    in_circle = False
+    in_square = False
+
+    # Check for circle
+    if (x - circle_center[0]) ** 2 + (y - circle_center[1]) ** 2 <= a ** 2:
+        count_in_circle += 1
+        points_circle[0].set_data(x, y)
+        in_circle = True
+
+    # Check for square
