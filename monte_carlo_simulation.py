@@ -10,7 +10,7 @@ circle_center = (4*a, 0)
 
 square_bottom_left = (0, -a/2)
 
-num_point = 3000
+num_points = 3000
 
 # Setup Figures
 fig, ax = plt.subplots(figsize=(10,5))
@@ -31,9 +31,9 @@ ax.Add_patch(circle)
 ax.legend(loc = 'upper right')
 
 # Scatter plots for points
-points_circle = ax.plot([], [], 'o', color = 'blue', markersize = 4, label = 'Points in Circle')
-points_square = ax.plot([], [], 'o', color = 'green', markersize = 4, label = 'Points in Square')
-points_other = ax.plot([], [], 'o', color = 'gray', markersize = 4, label = 'Points Outside')
+points_circle, _ = ax.plot([], [], 'o', color = 'blue', markersize = 4, label = 'Points in Circle')
+points_square, _  = ax.plot([], [], 'o', color = 'green', markersize = 4, label = 'Points in Square')
+points_other, _  = ax.plot([], [], 'o', color = 'gray', markersize = 4, label = 'Points Outside')
 
 # Text for Ratio
 text_ratio =  ax.text (0,5, 1.1, '', transform = ax.transAxes, fontsize = 12, ha = 'center', verticalalignment = 'top',
@@ -100,3 +100,9 @@ def animate(i):
         text_ratio.set_text('Calculating...')
 
     return points_circle, points_square, points_other, text_ratio
+
+# Create the animation
+ani = FuncAnimation(fig, animate, frames = num_points, interval = 20, blit = False, repeat = False)
+
+plt.show()
+
