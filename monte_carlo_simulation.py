@@ -35,5 +35,9 @@ points_circle = ax.plot([], [], 'o', color = 'blue', markersize = 4, label = 'Po
 points_square = ax.plot([], [], 'o', color = 'green', markersize = 4, label = 'Points in Square')
 points_other = ax.plot([], [], 'o', color = 'gray', markersize = 4, label = 'Points Outside')
 
+# Text for Ratio
+text_ratio =  ax.text (0,5, 1.1, '', transform = ax.transAxes, fontsize = 12, ha = 'center', verticalalignment = 'top',
+                       bbox = dict(facecolor = 'white', alpha = 0.7))
+
 # Main Code
 
