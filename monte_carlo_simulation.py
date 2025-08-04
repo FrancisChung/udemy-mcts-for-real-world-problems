@@ -56,7 +56,7 @@ points_in_other_y = []
 
 
 
-def animate(i, a):
+def animate(i):
     global count_in_circle, count_in_square
 
     #generate random points
@@ -81,3 +81,13 @@ def animate(i, a):
         points_in_square_x.append(x)
         points_in_square_y.append(y)
         in_square = True
+
+    # Update Scatter Plot
+    points_circle.set_data(points_in_circle_x, points_in_circle_y)
+    points_square.set_data(points_in_square_x, points_in_square_y)
+
+    # other points
+    if not in_circle and not in_square:
+        points_in_other_x.append(x)
+        points_in_other_y.append(y)
+        points_other.set_data(points_in_other_x, points_in_other_y)
