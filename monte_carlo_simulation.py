@@ -27,4 +27,9 @@ ax.Add_patch(square)
 circle = plt.Circle(circle_center, a, facecolor = 'none', edgecolor = 'blue', linewidth = 2,  label = 'Circle')
 ax.Add_patch(circle)
 
+# Legend
+ax.legend(loc = 'upper right')
+
+
 # Main Code
+
