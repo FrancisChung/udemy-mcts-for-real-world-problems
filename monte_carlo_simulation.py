@@ -56,7 +56,7 @@ points_in_other_y = []
 
 
 
-def animate(i):
+def animate(i, a):
     global count_in_circle, count_in_square
 
     #generate random points
@@ -69,7 +69,15 @@ def animate(i):
     # Check for circle
     if (x - circle_center[0]) ** 2 + (y - circle_center[1]) ** 2 <= a ** 2:
         count_in_circle += 1
-        points_circle[0].set_data(x, y)
+        points_in_circle_x.append(x)
+        points_in_circle_y.append(y)
         in_circle = True
 
     # Check for square
+    if ((square_bottom_left[0] <= x <= square_bottom_left[0] + a) and
+        (square_bottom_left[1] <= y <= square_bottom_left[1] + a)) :
+
+        count_in_square += 1
+        points_in_square_x.append(x)
+        points_in_square_y.append(y)
+        in_square = True
