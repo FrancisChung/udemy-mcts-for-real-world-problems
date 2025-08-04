@@ -30,6 +30,10 @@ ax.Add_patch(circle)
 # Legend
 ax.legend(loc = 'upper right')
 
+# Scatter plots for points
+points_circle = ax.plot([], [], 'o', color = 'blue', markersize = 4, label = 'Points in Circle')
+points_square = ax.plot([], [], 'o', color = 'green', markersize = 4, label = 'Points in Square')
+points_other = ax.plot([], [], 'o', color = 'gray', markersize = 4, label = 'Points Outside')
 
 # Main Code
 
